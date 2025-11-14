@@ -1,4 +1,4 @@
-FROM openjdk:17-jdk-slim
+FROM eclipse-temurin:17-jdk-alpine
 
 WORKDIR /app
 
@@ -21,4 +21,4 @@ RUN ./gradlew build -x test
 EXPOSE 8080
 
 # Run the application
-CMD ["java", "-jar", "build/libs/ahamo-dummy-demo2-backend-template-1.0.0-SNAPSHOT.jar"]
+CMD ["java", "-jar", "build/libs/devin-verification-backend-category-service-1.0.0-SNAPSHOT.jar"]

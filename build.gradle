@@ -31,9 +31,12 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
     implementation 'org.springframework.boot:spring-boot-starter-validation'
     implementation 'org.springframework.boot:spring-boot-starter-actuator'
+    implementation 'org.springframework.boot:spring-boot-starter-graphql'
+    implementation 'org.springframework.boot:spring-boot-starter-webflux'
 
     // Database Migration
     implementation 'org.flywaydb:flyway-core'
+    implementation 'org.flywaydb:flyway-database-postgresql'
 
     // JWT (Optional - uncomment if needed)
     // implementation 'io.jsonwebtoken:jjwt-api:0.12.3'
@@ -104,8 +107,8 @@ spotless {
 
 sonarqube {
     properties {
-        property "sonar.projectKey", "ahamo-dummy-demo2-backend-template"
-        property "sonar.projectName", "Ahamo Dummy Demo2 Backend Template"
+        property "sonar.projectKey", "devin-verification-backend-category-service"
+        property "sonar.projectName", "Devin Verification Backend Category Service"
         property "sonar.coverage.jacoco.xmlReportPaths", "build/reports/jacoco/test/jacocoTestReport.xml"
         property "sonar.coverage.exclusions", "**/config/**, **/dto/**, **/entity/**, **/*Application.java"
     }

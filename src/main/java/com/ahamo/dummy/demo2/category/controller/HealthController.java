@@ -1,4 +1,4 @@
-package com.ahamo.dummy.demo2.template.controller;
+package com.ahamo.dummy.demo2.category.controller;
 
 import java.time.LocalDateTime;
 import java.util.Map;
@@ -17,6 +17,6 @@ public class HealthController {
         Map.of(
             "status", "UP",
             "timestamp", LocalDateTime.now(),
-            "service", "backend-template-service"));
+            "service", "category-service"));
   }
 }
