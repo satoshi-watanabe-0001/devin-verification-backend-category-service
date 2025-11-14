@@ -3,7 +3,9 @@ package com.ahamo.dummy.demo2.category.entity;
 import jakarta.persistence.*;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 import lombok.*;
 
 @Entity
@@ -39,11 +41,11 @@ public class Product {
 
   @OneToMany(mappedBy = "product", cascade = CascadeType.ALL, orphanRemoval = true)
   @Builder.Default
-  private List<ProductStorageOption> storageOptions = new ArrayList<>();
+  private Set<ProductStorageOption> storageOptions = new HashSet<>();
 
   @OneToMany(mappedBy = "product", cascade = CascadeType.ALL, orphanRemoval = true)
   @Builder.Default
-  private List<ProductColorOption> colorOptions = new ArrayList<>();
+  private Set<ProductColorOption> colorOptions = new HashSet<>();
 
   @OneToMany(mappedBy = "product", cascade = CascadeType.ALL, orphanRemoval = true)
   @Builder.Default

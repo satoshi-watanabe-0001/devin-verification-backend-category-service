@@ -13,6 +13,7 @@ import com.ahamo.dummy.demo2.category.repository.ProductRepository;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Optional;
 import org.junit.jupiter.api.BeforeEach;
@@ -57,8 +58,8 @@ class CategoryServiceTest {
             .modelName("iPhone 15")
             .imageUrl("image.jpg")
             .description("Latest iPhone")
-            .storageOptions(new ArrayList<>())
-            .colorOptions(new ArrayList<>())
+            .storageOptions(new HashSet<>())
+            .colorOptions(new HashSet<>())
             .productCampaigns(new ArrayList<>())
             .createdAt(LocalDateTime.now())
             .updatedAt(LocalDateTime.now())
@@ -244,8 +245,8 @@ class CategoryServiceTest {
             .manufacturer("Apple")
             .modelName("iPhone 14")
             .imageUrl("image2.jpg")
-            .storageOptions(new ArrayList<>())
-            .colorOptions(new ArrayList<>())
+            .storageOptions(new HashSet<>())
+            .colorOptions(new HashSet<>())
             .productCampaigns(new ArrayList<>())
             .createdAt(LocalDateTime.now())
             .updatedAt(LocalDateTime.now())
