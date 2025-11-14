@@ -1,4 +1,4 @@
-package com.ahamo.dummy.demo2.template.config;
+package com.ahamo.dummy.demo2.category.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -16,6 +16,8 @@ public class SecurityConfig {
         .authorizeHttpRequests(
             auth ->
                 auth.requestMatchers("/api/v1/health/**")
+                    .permitAll()
+                    .requestMatchers("/v1/products/**")
                     .permitAll()
                     .requestMatchers("/actuator/**")
                     .permitAll()

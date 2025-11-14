@@ -5,7 +5,7 @@ server:
 
 spring:
   application:
-    name: ${SERVICE_NAME:backend-template-service}
+    name: ${SERVICE_NAME:category-service}
   
   datasource:
     url: jdbc:postgresql://localhost:5432/${DB_NAME:ahamo_dummy_demo2}
@@ -32,6 +32,12 @@ spring:
       name: admin
       password: admin
       roles: ADMIN
+
+# Inventory Service GraphQL Configuration
+inventory-service:
+  graphql:
+    url: ${INVENTORY_SERVICE_GRAPHQL_URL:http://localhost:8085/graphql}
+    timeout: 5000
 
 # JWT Configuration (Optional - uncomment if needed)
 # jwt:

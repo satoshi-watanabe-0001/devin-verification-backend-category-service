@@ -1,9 +1,9 @@
-package com.ahamo.dummy.demo2.template.controller;
+package com.ahamo.dummy.demo2.category.controller;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
-import com.ahamo.dummy.demo2.template.config.SecurityConfig;
+import com.ahamo.dummy.demo2.category.config.SecurityConfig;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
@@ -24,7 +24,7 @@ class HealthControllerTest {
         .perform(get("/api/v1/health"))
         .andExpect(status().isOk())
         .andExpect(jsonPath("$.status").value("UP"))
-        .andExpect(jsonPath("$.service").value("backend-template-service"))
+        .andExpect(jsonPath("$.service").value("category-service"))
         .andExpect(jsonPath("$.timestamp").exists());
   }
 }

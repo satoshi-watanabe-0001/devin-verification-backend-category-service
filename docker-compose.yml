@@ -1,13 +1,13 @@
 version: '3.8'
 
 services:
-  backend-service:
+  category-service:
     build: .
     ports:
       - "8080:8080"
     environment:
       - SPRING_PROFILES_ACTIVE=docker
-      - SERVICE_NAME=${SERVICE_NAME:-backend-template-service}
+      - SERVICE_NAME=${SERVICE_NAME:-category-service}
       - DB_NAME=${DB_NAME:-ahamo_dummy_demo2}
       - DB_USERNAME=${DB_USERNAME:-ahamo_user}
       - DB_PASSWORD=${DB_PASSWORD:-ahamo_password}
